@@ -1,5 +1,3 @@
-const { get } = require("../../routes/api");
-
 let db;
 
 // a request to the current db.
