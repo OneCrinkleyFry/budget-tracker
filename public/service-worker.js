@@ -12,6 +12,7 @@ const FILES_TO_CACHE = [
 // event listener that detects a fetch
 self.addEventListener('fetch', function(event) {
    // checks the fetch request. if the request matches a previous request, then return the cache
+   //work already
    event.respondWith(caches.match(event.request).then(function (request) {
       return request || fetch(event.request);
    }));
