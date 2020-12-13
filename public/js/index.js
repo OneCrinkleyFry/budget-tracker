@@ -1,6 +1,7 @@
 let transactions = [];
 let myChart;
 
+//fetches the data from the database.
 fetch("/api/transaction")
   .then(response => {
     return response.json();
@@ -8,7 +9,7 @@ fetch("/api/transaction")
   .then(data => {
     // save db data on global variable
     transactions = data;
-
+    //populates the cooresponding sections of the chart
     populateTotal();
     populateTable();
     populateChart();
