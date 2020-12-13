@@ -1,5 +1,3 @@
-const e = require("express");
-
 const APP_PREFIX = 'BudgetTracker-'
 const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION;
@@ -9,7 +7,7 @@ const FILES_TO_CACHE = [
    './css/styles.css',
    './js/idb.js',
    './js/index.js'
-]
+];
 
 self.addEventListener('fetch', function(event) {
    e.respondWith(caches.match(e.request).then(function (request) {
